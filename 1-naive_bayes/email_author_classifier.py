@@ -39,10 +39,6 @@ print("Predicting Time:", round(time()-t0, 3), "s")
 
 print("Classifier score is ", round(score, 3))
 
-# Results for later comparation
-# Training Time: 0.477 s
-# Predicting Time: 0.067 s
-# Classifier score is  0.973
 ##############################################################
 
 ##############################################################
