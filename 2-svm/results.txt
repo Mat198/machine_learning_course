@@ -1,0 +1,39 @@
+####################  Results  #########################
+Linear kernel:
+    With full data:
+    Training Time: 47.981 s
+    Predicting Time: 4.908 s
+    Classifier score is  0.984
+
+    With 100 times less data
+    Training Time: 0.015 s
+    Predicting Time: 0.143 s
+    Classifier score is  0.885
+
+RBF kernel: 
+    Note: It's required to change the gamma from "scale" to "auto" to get the same 
+    score as expected by the exercise. In the version 0.22 the gamma default was changed.
+    
+    With 100 times less data:
+        Training Time: 0.016 s
+        Predicting Time: 0.33 s
+        Classifier score is 0.616
+
+        C value impact on prediction score:
+        C = 1 -> Score: 0.616
+        C = 10 -> Score: 0.616
+        C = 100 -> Score: 0.616
+        C = 1000 -> Score: 0.821
+        C = 10000 -> Score: 0.892
+        C = 100000 -> Score: 0.860 - This mean overfitting to the training data set
+
+    Using the full data set and optimized C=10000:
+        Training Time: 32.329 s
+        Predicting Time: 4.512 s
+        Classifier score is  0.991
+
+Predicting classes from test set:
+    Prediction for element 10 ->  1 - Sara
+    Prediction for element 26 ->  0 - Chris
+    Prediction for element 50 ->  1 - Sara
+    SVM predicts that Chris is the author of  877 / 1758  emails.
