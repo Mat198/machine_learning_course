@@ -37,7 +37,7 @@ t0 = time()
 score = clf.score(features_test, labels_test)
 print("Predicting Time:", round(time()-t0, 3), "s")
 
-print("Classifier score is ", round(score, 3))
+print("Classifier score is", round(score, 3))
 
 ##############################################################
 

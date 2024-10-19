@@ -3,12 +3,12 @@ Linear kernel:
     With full data:
     Training Time: 47.981 s
     Predicting Time: 4.908 s
-    Classifier score is  0.984
+    Classifier score is 0.984
 
     With 100 times less data
     Training Time: 0.015 s
     Predicting Time: 0.143 s
-    Classifier score is  0.885
+    Classifier score is 0.885
 
 RBF kernel: 
     Note: It's required to change the gamma from "scale" to "auto" to get the same 
@@ -30,10 +30,10 @@ RBF kernel:
     Using the full data set and optimized C=10000:
         Training Time: 32.329 s
         Predicting Time: 4.512 s
-        Classifier score is  0.991
+        Classifier score is 0.991
 
 Predicting classes from test set:
-    Prediction for element 10 ->  1 - Sara
-    Prediction for element 26 ->  0 - Chris
-    Prediction for element 50 ->  1 - Sara
-    SVM predicts that Chris is the author of  877 / 1758  emails.
+    Prediction for element 10 -> 1 - Sara
+    Prediction for element 26 -> 0 - Chris
+    Prediction for element 50 -> 1 - Sara
+    SVM predicts that Chris is the author of 877 / 1758 emails.

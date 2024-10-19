@@ -39,12 +39,12 @@ pred = clf.predict(features_test)
 print("Predicting Time:", round(time()-t0, 3), "s")
 
 score = clf.score(features_test, labels_test)
-print("Classifier score is ", round(score, 3))
+print("Classifier score is", round(score, 3))
 
-print("Prediction for element 10 -> ", pred[10])
-print("Prediction for element 26 -> ", pred[26])
-print("Prediction for element 50 -> ", pred[50])
-print("SVM predicts that Chris is the author of ", (pred == 1).sum(), "/", len(pred), " emails.")
+print("Prediction for element 10 ->", pred[10])
+print("Prediction for element 26 ->", pred[26])
+print("Prediction for element 50 ->", pred[50])
+print("SVM predicts that Chris is the author of", (pred == 1).sum(), "/", len(pred), "emails.")
 #########################################################
 
 #########################################################
