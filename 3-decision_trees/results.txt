@@ -1,0 +1,12 @@
+# Training with 10% percentile features
+Data has 3785 features!
+Training Time: 19.296 s
+Predicting Time: 0.01 s
+Classifier score is 0.978
+
+# Training with 1% percentile features
+Training data set size is 15820 .
+Data has 379 features!
+Training Time: 1.136 s
+Predicting Time: 0.002 s
+Classifier score is 0.967
