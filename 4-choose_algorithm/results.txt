@@ -1,0 +1,9 @@
+KNN Classifier (default)
+Training Time: 0.001 s
+Predicting Time: 0.004 s
+Classifier score is 0.92
+
+KNN Classifier (n_neighbors=4, weights='distance',p=2)
+Training Time: 0.001 s
+Predicting Time: 0.001 s
+Classifier score is 0.94
