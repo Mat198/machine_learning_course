@@ -1,3 +1,6 @@
 tools/maildir
 *.pkl
 *.pyc
+*.pdf
+
+final_project/emails_by_address
