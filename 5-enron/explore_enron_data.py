@@ -33,19 +33,25 @@ fastow_pays = 0
 # Checking for available data
 salary_available = 0
 email_available = 0
-
+missing_total_pay = 0
+missing_poi_total_pay = 0
 for [key, value] in enron_data.items():
     if show_info_size:
         print("Info of each person:", len(value))
         show_info_size = False
     if value["poi"]:
         poi_count += 1
+        if value["total_payments"] == 'NaN':
+            missing_poi_total_pay += 1
     
     if value["salary"] != 'NaN':
         salary_available += 1
 
     if value["email_address"] != 'NaN':
         email_available += 1
+    
+    if value["total_payments"] == 'NaN':
+        missing_total_pay += 1
 
     if key == "PRENTICE JAMES":
         print(key, "total stock value is",value['total_stock_value'])
@@ -57,7 +63,6 @@ for [key, value] in enron_data.items():
         print(key, "total stock value is",value["exercised_stock_options"])
         print(key, "total payments value is",value["total_payments"])
         skilling_pays_pays = value["total_payments"]
-        
     
     if key == "FASTOW ANDREW S":
         print(key, "total payments value is",value["total_payments"])
@@ -79,4 +84,18 @@ if skilling_pays > fastow_pays and skilling_pays > lay_pays:
 print("There are",salary_available,"salaries availables!")
 print("There are",email_available,"emails availables!")
 
+missing_pay_percentage = round(100 * missing_total_pay/len(enron_data),1)
+print("There are",missing_total_pay,"people with missing payments of",
+    len(enron_data),"(" + str(missing_pay_percentage) + "%)"
+)
+
+poi_total_pay_percentage = round(100 * missing_poi_total_pay/poi_count,1)
+print("There are",missing_poi_total_pay,"PoI with missing total payments info of",
+    poi_count,"(" + str(poi_total_pay_percentage) + "%)"
+)
+
 print("Number of PoIs:", poi_count)
+# Adding 10 PoIs with NaN for total payments
+new_lenght = len(enron_data) + 10
+new_missing_pay = missing_total_pay+10
+print("There are now", new_lenght, "people in dataset with", new_missing_pay, "missing payments.")
