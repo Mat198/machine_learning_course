@@ -73,8 +73,6 @@ reg.fit(feature_train, target_train)
 test_score = reg.score(feature_test, target_test)
 print("Long term incentivet test data score", test_score)
 
-
-
 ### draw the scatterplot, with color-coded training and testing points
 import matplotlib.pyplot as plt
 for feature, target in zip(feature_test, target_test):
